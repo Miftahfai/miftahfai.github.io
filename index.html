@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miftah Faizah · PhD Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-50: #f0f7ee;
+      --green-100: #d8eecd;
+      --green-200: #b4d9a3;
+      --green-300: #8ec47a;
+      --green-400: #6aab54;
+      --green-500: #4e8f3a;
+      --green-600: #3a6e29;
+      --cream: #faf8f3;
+      --beige: #f3ede2;
+      --lilac: #ede9f5;
+      --lilac-mid: #d5cce8;
+      --peach: #fbeee6;
+      --text-dark: #2c3522;
+      --text-mid: #4a5240;
+      --text-muted: #7a8570;
+      --text-light: #a8b0a0;
+      --white: #ffffff;
+      --shadow-soft: 0 2px 16px rgba(60,80,40,0.08);
+      --shadow-card: 0 4px 24px rgba(60,80,40,0.10);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 32px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background-color: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(250, 248, 243, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(142, 196, 122, 0.18);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--green-600);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-mid);
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--green-500); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 2rem 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative background shapes */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero-blob-1 {
+      position: absolute;
+      top: -120px; right: -80px;
+      width: 600px; height: 600px;
+      background: radial-gradient(ellipse at 60% 40%, rgba(180,217,163,0.35) 0%, rgba(240,247,238,0.0) 70%);
+      border-radius: 50%;
+    }
+    .hero-blob-2 {
+      position: absolute;
+      bottom: -100px; left: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(ellipse at 40% 60%, rgba(213,204,232,0.28) 0%, rgba(240,247,238,0.0) 70%);
+      border-radius: 50%;
+    }
+    .hero-blob-3 {
+      position: absolute;
+      top: 40%; left: 38%;
+      width: 340px; height: 340px;
+      background: radial-gradient(ellipse, rgba(251,238,230,0.40) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    /* Subtle floating dots */
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.18;
+    }
+    .dot-1 { width: 10px; height: 10px; background: var(--green-400); top: 18%; left: 12%; }
+    .dot-2 { width: 6px; height: 6px; background: var(--lilac-mid); top: 70%; left: 8%; }
+    .dot-3 { width: 14px; height: 14px; background: var(--green-300); top: 30%; right: 18%; }
+    .dot-4 { width: 8px; height: 8px; background: #e8c4b8; top: 60%; right: 12%; }
+    .dot-5 { width: 5px; height: 5px; background: var(--green-400); bottom: 20%; left: 35%; }
+
+    /* Small brain/EEG wave decorative SVG */
+    .hero-deco-wave {
+      position: absolute;
+      right: 5%; bottom: 12%;
+      opacity: 0.10;
+    }
+
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text { }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-50);
+      border: 1px solid var(--green-200);
+      color: var(--green-600);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.4rem;
+    }
+    .hero-tag-dot {
+      width: 6px; height: 6px;
+      background: var(--green-400);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    .hero-name {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      font-weight: 500;
+      color: var(--text-dark);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--green-500);
+    }
+
+    .hero-role {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.01em;
+    }
+    .hero-affil {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .hero-intro {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 2.2rem;
+      max-width: 480px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-500);
+      color: white;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 2px 12px rgba(78,143,58,0.25);
+    }
+    .btn-primary:hover { background: var(--green-600); transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text-mid);
+      text-decoration: none;
+      padding: 11px 24px;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 400;
+      border: 1.5px solid rgba(142,196,122,0.4);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--green-400); color: var(--green-600); }
+
+    /* Profile image */
+    .hero-image-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-image-ring {
+      width: 340px;
+      height: 340px;
+      border-radius: 50% 48% 52% 50% / 50% 52% 48% 50%;
+      background: linear-gradient(135deg, var(--green-100) 0%, var(--lilac) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 8px 40px rgba(78,143,58,0.13);
+    }
+    .hero-image-inner {
+      width: 300px;
+      height: 300px;
+      border-radius: 50% 48% 52% 50% / 50% 52% 48% 50%;
+      background: var(--green-50);
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .profile-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-400);
+      gap: 8px;
+    }
+    .profile-placeholder svg { opacity: 0.55; }
+    .profile-placeholder span {
+      font-size: 0.72rem;
+      color: var(--green-400);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    /* floating badges around image */
+    .img-badge {
+      position: absolute;
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 8px 14px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: var(--text-mid);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .img-badge .badge-icon {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .badge-green { background: var(--green-50); }
+    .badge-lilac { background: var(--lilac); }
+    .badge-peach { background: var(--peach); }
+    .badge-top { top: 10px; right: -30px; }
+    .badge-bottom { bottom: 20px; left: -40px; }
+
+    /* ── SECTIONS COMMON ── */
+    section {
+      padding: 90px 2rem;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-500);
+      margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 20px; height: 1.5px;
+      background: var(--green-400);
+    }
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+      font-weight: 500;
+      color: var(--text-dark);
+      line-height: 1.3;
+      margin-bottom: 2rem;
+      letter-spacing: -0.015em;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--white);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.7fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .about-left { }
+    .about-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .meta-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .meta-icon {
+      width: 36px; height: 36px;
+      background: var(--green-50);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .meta-icon svg { opacity: 0.7; }
+    .meta-text { }
+    .meta-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .meta-value {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.45;
+    }
+
+    .about-body p {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 1.4rem;
+    }
+    .about-body p:last-child { margin-bottom: 0; }
+
+    /* ── RESEARCH INTERESTS ── */
+    #research {
+      background: var(--cream);
+    }
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .interest-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.4rem 1.2rem;
+      border: 1px solid rgba(142,196,122,0.2);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .interest-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card);
+    }
+    .interest-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .interest-icon-green { background: var(--green-50); }
+    .interest-icon-lilac { background: var(--lilac); }
+    .interest-icon-peach { background: var(--peach); }
+    .interest-icon-beige { background: var(--beige); }
+    .interest-label {
+      font-size: 0.92rem;
+      color: var(--text-dark);
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    /* ── CURRENT WORK ── */
+    #work {
+      background: var(--white);
+    }
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+    .work-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      border: 1px solid rgba(142,196,122,0.15);
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .work-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--green-300);
+    }
+    .work-card:hover { box-shadow: var(--shadow-card); }
+    .work-number {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--green-200);
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+    .work-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+
+    /* ── AWARDS ── */
+    #awards {
+      background: var(--green-50);
+      position: relative;
+      overflow: hidden;
+    }
+    #awards::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(ellipse, rgba(180,217,163,0.4) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .awards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+    .award-item {
+      background: rgba(255,255,255,0.8);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.6rem;
+      border: 1px solid rgba(255,255,255,0.9);
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      box-shadow: 0 1px 8px rgba(60,80,40,0.05);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .award-item:hover {
+      transform: translateX(3px);
+      box-shadow: 0 2px 14px rgba(60,80,40,0.10);
+    }
+    .award-star {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      background: var(--green-100);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .award-text { }
+    .award-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      line-height: 1.4;
+      margin-bottom: 2px;
+    }
+    .award-year {
+      font-size: 0.8rem;
+      color: var(--green-500);
+      font-weight: 500;
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: var(--white);
+    }
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-intro {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--text-dark);
+      border: 1px solid rgba(142,196,122,0.15);
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      font-size: 0.92rem;
+    }
+    .contact-link:hover {
+      background: var(--green-50);
+      border-color: var(--green-300);
+      transform: translateX(3px);
+    }
+    .contact-link-icon {
+      width: 36px; height: 36px;
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .cl-email { background: var(--green-50); color: var(--green-500); }
+    .cl-github { background: var(--beige); color: var(--text-mid); }
+    .cl-linkedin { background: #e8f0f8; color: #0077b5; }
+    .cl-orcid { background: #edf7ed; color: #a6ce39; }
+    .contact-link-text { flex: 1; }
+    .contact-link-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      display: block;
+      margin-bottom: 1px;
+    }
+    .contact-link-value {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+    }
+    .contact-link-arrow {
+      color: var(--text-light);
+      font-size: 0.8rem;
+      transition: transform 0.15s;
+    }
+    .contact-link:hover .contact-link-arrow { transform: translateX(3px); }
+
+    /* Contact card */
+    .contact-card {
+      background: linear-gradient(135deg, var(--green-50) 0%, var(--lilac) 100%);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem 2.5rem 2rem;
+      border: 1px solid rgba(180,217,163,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; right: -40px;
+      width: 200px; height: 200px;
+      background: radial-gradient(ellipse, rgba(255,255,255,0.6) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .contact-card-title {
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 0.8rem;
+      position: relative;
+      z-index: 1;
+    }
+    .contact-card-body {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+      position: relative;
+      z-index: 1;
+    }
+    .contact-card-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: var(--green-600);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      box-shadow: 0 2px 10px rgba(60,80,40,0.1);
+      transition: box-shadow 0.2s, transform 0.15s;
+      position: relative;
+      z-index: 1;
+    }
+    .contact-card-email:hover {
+      box-shadow: 0 4px 16px rgba(60,80,40,0.18);
+      transform: translateY(-1px);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--cream);
+      border-top: 1px solid rgba(142,196,122,0.2);
+      padding: 2rem;
+      text-align: center;
+    }
+    .footer-text {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .footer-text a {
+      color: var(--green-500);
+      text-decoration: none;
+    }
+    .footer-text a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 1.2rem; }
+      .nav-links a { font-size: 0.8rem; }
+
+      .hero { padding: 90px 1.2rem 50px; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+      .hero-image-wrap { order: -1; }
+      .hero-image-ring { width: 240px; height: 240px; }
+      .hero-image-inner { width: 210px; height: 210px; }
+      .badge-top { right: -10px; }
+      .badge-bottom { left: -10px; }
+      .hero-intro { max-width: 100%; }
+      .hero-cta { justify-content: center; }
+
+      section { padding: 60px 1.2rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contact-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+      .interests-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Miftah Faizah</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-blob-1"></div>
+      <div class="hero-blob-2"></div>
+      <div class="hero-blob-3"></div>
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
+      <div class="dot dot-4"></div>
+      <div class="dot dot-5"></div>
+      <!-- EEG wave decoration -->
+      <svg class="hero-deco-wave" width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 40 L20 40 L30 10 L40 70 L50 25 L60 55 L70 35 L80 45 L90 20 L100 60 L110 30 L120 50 L130 40 L150 40 L160 40 L170 15 L180 65 L190 28 L200 52 L210 38 L220 42 L230 18 L240 62 L250 32 L260 48 L270 40 L300 40" stroke="#6aab54" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-text fade-up">
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          PhD Researcher · University of Leeds
+        </div>
+        <h1 class="hero-name">Miftah<br><em>Faizah</em></h1>
+        <p class="hero-role">PhD Researcher in Adolescent Neuroscience</p>
+        <p class="hero-affil">BrainPop Lab · ICON Lab · School of Psychology, University of Leeds</p>
+        <p class="hero-intro">
+          Studying adolescent mental health through EEG, with interests in digital behaviour, social media, and ecological experimental design — bridging neuroscience, psychology, and real-world experience.
+        </p>
+        <div class="hero-cta">
+          <a href="#about" class="btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            About Me
+          </a>
+          <a href="#contact" class="btn-ghost">
+            Get in Touch
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap fade-up" style="transition-delay: 0.15s;">
+        <div class="hero-image-ring">
+          <div class="hero-image-inner">
+            <!-- Replace src with actual photo: <img src="your-photo.jpg" alt="Miftah Faizah" style="width:100%;height:100%;object-fit:cover;"> -->
+            <div class="profile-placeholder">
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>profile photo</span>
+            </div>
+          </div>
+        </div>
+        <!-- Floating badges -->
+        <div class="img-badge badge-top">
+          <div class="badge-icon badge-green">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6aab54" stroke-width="2.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          EEG Neuroscience
+        </div>
+        <div class="img-badge badge-bottom">
+          <div class="badge-icon badge-lilac">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a6fb0" stroke-width="2.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          Adolescent Mental Health
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left fade-up">
+          <div class="section-label">Background</div>
+          <h2 class="section-title">About<br>Me</h2>
+          <div class="about-meta">
+            <div class="meta-item">
+              <div class="meta-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6aab54" stroke-width="2" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div class="meta-text">
+                <div class="meta-label">Institution</div>
+                <div class="meta-value">University of Leeds</div>
+              </div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6aab54" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div class="meta-text">
+                <div class="meta-label">Stage</div>
+                <div class="meta-value">PhD Researcher</div>
+              </div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6aab54" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="meta-text">
+                <div class="meta-label">Labs</div>
+                <div class="meta-value">BrainPop Lab<br>ICON Lab</div>
+              </div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6aab54" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="meta-text">
+                <div class="meta-label">Location</div>
+                <div class="meta-value">Leeds, United Kingdom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-body fade-up" style="transition-delay: 0.1s;">
+          <div class="section-label">Who I am</div>
+          <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">A researcher bridging neuroscience, psychology, and everyday life</h2>
+          <p>
+            I am a PhD Researcher at the University of Leeds, working across the BrainPop Lab and ICON Lab. My research focuses on adolescent mental health using EEG and experimental neuroscience, with particular interests in digital behaviour, social media, and ecological experimental design. More broadly, I am interested in how emotional and neural processes are shaped by everyday experiences, and how research can better reflect real life rather than relying only on highly controlled laboratory tasks.
+          </p>
+          <p>
+            Before beginning my PhD, I trained in clinical psychology and also worked in applied psychology in Indonesia, including as a police psychologist. These experiences shaped my interest in mental health from both scientific and practical perspectives. In my current work, I aim to connect neuroscience, psychology, and digital life in ways that are rigorous, meaningful, and relevant to young people's lived experiences.
+          </p>
+          <p>
+            Alongside my PhD research, I am also involved in work related to social media abstinence and in developing BrainExplorer.id. Across my projects, I am especially drawn to research that is not only methodologically strong, but also accessible, engaging, and grounded in real-world contexts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH INTERESTS -->
+  <section id="research">
+    <div class="container">
+      <div class="fade-up">
+        <div class="section-label">Focus Areas</div>
+        <h2 class="section-title">Research Interests</h2>
+      </div>
+      <div class="interests-grid">
+        <div class="interest-card fade-up">
+          <div class="interest-icon interest-icon-green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4e8f3a" stroke-width="2" stroke-linecap="round"><path d="M12 2a5 5 0 0 1 5 5c0 5-5 8-5 8S7 12 7 7a5 5 0 0 1 5-5z"/><path d="M9 13.5c-1 1.5-1.5 3-1.5 4.5M15 13.5c1 1.5 1.5 3 1.5 4.5M8.5 18h7"/></svg>
+          </div>
+          <div class="interest-label">Adolescent Mental Health</div>
+        </div>
+        <div class="interest-card fade-up" style="transition-delay: 0.05s;">
+          <div class="interest-icon interest-icon-lilac">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a6fb0" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="interest-label">EEG and Cognitive Neuroscience</div>
+        </div>
+        <div class="interest-card fade-up" style="transition-delay: 0.10s;">
+          <div class="interest-icon interest-icon-peach">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b87050" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="interest-label">Digital Behaviour and Social Media</div>
+        </div>
+        <div class="interest-card fade-up" style="transition-delay: 0.15s;">
+          <div class="interest-icon interest-icon-green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4e8f3a" stroke-width="2" stroke-linecap="round"><path d="M3 3h18v18H3z" rx="2"/><path d="M7 7h10M7 12h7M7 17h4"/></svg>
+          </div>
+          <div class="interest-label">Ecological Experimental Design</div>
+        </div>
+        <div class="interest-card fade-up" style="transition-delay: 0.20s;">
+          <div class="interest-icon interest-icon-lilac">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a6fb0" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="interest-label">Emotional Processing and Well-being</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT WORK -->
+  <section id="work">
+    <div class="container">
+      <div class="fade-up">
+        <div class="section-label">Active Projects</div>
+        <h2 class="section-title">Current Work</h2>
+      </div>
+      <div class="work-grid">
+        <div class="work-card fade-up">
+          <div class="work-number">01</div>
+          <div class="work-title">PhD research on EEG and adolescent mental health — exploring how brain activity relates to mood, digital behaviour, and everyday experience.</div>
+        </div>
+        <div class="work-card fade-up" style="transition-delay: 0.08s;">
+          <div class="work-number">02</div>
+          <div class="work-title">Studies on social media abstinence — investigating how stepping away from digital platforms affects well-being and neural responses in young people.</div>
+        </div>
+        <div class="work-card fade-up" style="transition-delay: 0.16s;">
+          <div class="work-number">03</div>
+          <div class="work-title">Developing BrainExplorer.id — a science communication initiative making neuroscience accessible and engaging for Indonesian audiences.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards">
+    <div class="container">
+      <div class="fade-up">
+        <div class="section-label">Recognition</div>
+        <h2 class="section-title">Awards &amp; Funding</h2>
+      </div>
+      <div class="awards-list">
+        <div class="award-item fade-up">
+          <div class="award-star">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4e8f3a" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="award-text">
+            <div class="award-name">LPDP Scholarship</div>
+            <div class="award-year">2024 – present</div>
+          </div>
+        </div>
+        <div class="award-item fade-up" style="transition-delay: 0.06s;">
+          <div class="award-star">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4e8f3a" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="award-text">
+            <div class="award-name">Beasiswa Unggulan, Ministry of Education, Culture, Research, and Technology</div>
+            <div class="award-year">2017 – 2019</div>
+          </div>
+        </div>
+        <div class="award-item fade-up" style="transition-delay: 0.12s;">
+          <div class="award-star">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4e8f3a" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="award-text">
+            <div class="award-name">Beasiswa Mahasiswa Aktif, Universitas Gadjah Mada</div>
+            <div class="award-year">Merit Award</div>
+          </div>
+        </div>
+        <div class="award-item fade-up" style="transition-delay: 0.18s;">
+          <div class="award-star">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4e8f3a" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="award-text">
+            <div class="award-name">Kagama (Alumni of Gadjah Mada University) Scholarship</div>
+            <div class="award-year">2013 – 2014</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="fade-up">
+          <div class="section-label">Connect</div>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="contact-intro">
+            I'm happy to hear from fellow researchers, students, or anyone curious about my work. Whether you'd like to collaborate, ask about my research, or just say hello — feel free to reach out.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:M.Faizah@leeds.ac.uk" class="contact-link">
+              <div class="contact-link-icon cl-email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">M.Faizah@leeds.ac.uk</span>
+              </div>
+              <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="https://github.com/Miftahfai" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon cl-github">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">Miftahfai</span>
+              </div>
+              <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="https://linkedin.com/in/miftahfaizah" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon cl-linkedin">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">miftahfaizah</span>
+              </div>
+              <span class="contact-link-arrow">→</span>
+            </a>
+            <a href="https://orcid.org/0000-0002-3016-5987" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon cl-orcid">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="contact-link-label">ORCID</span>
+                <span class="contact-link-value">0000-0002-3016-5987</span>
+              </div>
+              <span class="contact-link-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="fade-up" style="transition-delay: 0.12s;">
+          <div class="contact-card">
+            <div class="contact-card-title">Let's talk about research</div>
+            <div class="contact-card-body">
+              I'm always open to meaningful conversations — whether about EEG methodology, adolescent digital well-being, collaboration opportunities, or the brain more broadly. I especially enjoy connecting with people working at the intersection of science and society.
+            </div>
+            <a href="mailto:M.Faizah@leeds.ac.uk" class="contact-card-email">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Send an Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-text">
+      <p>© 2025 Miftah Faizah · PhD Researcher, University of Leeds</p>
+      <p style="margin-top: 4px;">BrainPop Lab · ICON Lab · School of Psychology</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-triggered fade-up
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Trigger immediately visible elements
+    setTimeout(() => {
+      document.querySelectorAll('.hero .fade-up').forEach(el => el.classList.add('visible'));
+    }, 100);
+  </script>
+</body>
+</html>
